@@ -8,5 +8,5 @@
     repo: git@github.com:wcarlsen/dotfiles.git
     version: master
     dest: /home/wcarlsen/dotfiles
-    accept_hostkey: yes
+    key_file: /home/wcarlsen/.ssh/id_rsa
   become: no

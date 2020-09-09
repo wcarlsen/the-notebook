@@ -11,11 +11,11 @@
 #   roles:
     # - kubernetes
 
-- name: Install aws
-  hosts: localhost
-  become: yes
-  roles:
-    - aws
+# - name: Install aws
+#   hosts: localhost
+#   become: yes
+#   roles:
+#     - aws
 
 - name: Fetch relevant github repos
   hosts: localhost
