@@ -7,3 +7,4 @@
 - git:
     repo: git@github.com:wcarlsen/dotfiles.git
     dest: /home/wcarlsen/dotfiles
+    accept_hostkey: yes
