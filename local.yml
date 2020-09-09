@@ -17,11 +17,11 @@
   roles:
     - aws
 
-# - name: Fetch relevant github repos
-#   hosts: localhost
-#   become: no
-#   roles:
-#     - github
+- name: Fetch relevant github repos
+  hosts: localhost
+  become: no
+  roles:
+    - github
  
 - name: Install apps packages
   hosts: localhost
