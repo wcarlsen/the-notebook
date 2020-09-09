@@ -19,7 +19,6 @@
 
 - name: Fetch relevant github repos
   hosts: localhost
-  become: no
   roles:
     - github
  
