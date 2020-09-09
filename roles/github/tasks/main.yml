@@ -5,5 +5,6 @@
     state: directory
 
 - git:
-    repo: https://github.com/wcarlsen/dotfiles.git
+    repo: git@github.com:wcarlsen/dotfiles.git
     dest: /home/wcarlsen/dotfiles
+  
