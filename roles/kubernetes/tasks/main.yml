@@ -1,4 +1,9 @@
 ---
+- name: Create kube folder
+  file:
+    path: /home/wcarlsen/.kube
+    state: directory
+
 - name: Install kuberentes packages
   pacman:
     name:

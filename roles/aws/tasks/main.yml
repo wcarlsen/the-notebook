@@ -1,0 +1,8 @@
+---
+- name: Install aws packages
+  pacman:
+    name:
+      - aws-cli
+    state: latest
+    update_cache: yes
+

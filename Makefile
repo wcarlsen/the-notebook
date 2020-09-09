@@ -1,2 +1,2 @@
 install:
-	sudo ansible-pull -U https://github.com/wcarlsen/the-playbook.git
+	sudo ansible-pull -U https://github.com/wcarlsen/the-notebook -i hosts
