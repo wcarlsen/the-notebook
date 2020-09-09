@@ -1,6 +1,0 @@
----
-- name: Install common
-  hosts: all
-  become: yes
-  roles:
-    - common
