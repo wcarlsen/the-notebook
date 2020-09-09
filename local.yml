@@ -1,15 +1,15 @@
 ---
-- name: Install common
-  hosts: localhost
-  become: yes
-  roles:
-    - common
+# - name: Install common
+#   hosts: localhost
+#   become: yes
+#   roles:
+#     - common
 
-- name: Install kubernetes
-  hosts: localhost
-  become: yes
-  roles:
-    - kubernetes
+# - name: Install kubernetes
+#   hosts: localhost
+#   become: yes
+#   roles:
+    # - kubernetes
 
 - name: Install aws
   hosts: localhost
@@ -23,8 +23,8 @@
   roles:
     - github
  
-- name: Install apps packages
-  hosts: localhost
-  become: yes
-  roles:
-    - apps
+# - name: Install apps packages
+#   hosts: localhost
+#   become: yes
+#   roles:
+#     - apps
