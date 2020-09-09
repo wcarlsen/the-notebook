@@ -6,5 +6,7 @@
 
 - git:
     repo: git@github.com:wcarlsen/dotfiles.git
+    version: master
     dest: /home/wcarlsen/dotfiles
     accept_hostkey: yes
+  become: no
