@@ -1,12 +1,11 @@
 ---
-- name: Install pacman packages
+- name: Install kuberentes packages
   pacman:
     name:
       - kubectl
       - kubectx
       - k9s
       - minikube
-  	state: latest
+    state: latest
     update_cache: yes
-      
 
