@@ -19,6 +19,7 @@
 
 - name: Fetch relevant github repos
   hosts: localhost
+  become: yes
   roles:
     - github
  
