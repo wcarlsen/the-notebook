@@ -4,5 +4,15 @@
   become: yes
   roles:
     - common
+
+- name: Install kubernetes
+  hosts: all
+  become: yes
+  roles:
     - kubernetes
+
+- name: Fetch relevant github repos
+  hosts: all
+  become: no
+  roles:
     - github
