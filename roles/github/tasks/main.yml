@@ -6,7 +6,7 @@
 
 - git:
     repo: git@github.com:wcarlsen/dotfiles.git
-    version: master
+    accept_hostkey: yes
     dest: /home/wcarlsen/dotfiles
     key_file: /home/wcarlsen/.ssh/id_rsa
   become: no
