@@ -12,7 +12,6 @@
       - hey
       - bat
       - tree
-      - autojump
       - exa
     state: latest
     update_cache: yes
