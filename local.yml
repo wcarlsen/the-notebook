@@ -1,30 +1,30 @@
 ---
 # - name: Install common
-#   hosts: all
+#   hosts: localhost
 #   become: yes
 #   roles:
 #     - common
 
 # - name: Install kubernetes
-#   hosts: all
+#   hosts: localhost
 #   become: yes
 #   roles:
 #     - kubernetes
 
 # - name: Install aws
-#   hosts: all
+#   hosts: localhost
 #   become: yes
 #   roles:
 #     - aws
 
 - name: Fetch relevant github repos
-  hosts: all
+  hosts: localhost
   become: no
   roles:
     - github
  
 # - name: Install apps packages
-#   hosts: all
+#   hosts: localhost
 #   become: yes
 #   roles:
 #     - apps
