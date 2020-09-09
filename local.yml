@@ -1,0 +1,16 @@
+---
+- name: Install pacman packages
+  pacman: name={{ item }} state=latest update_cache=yes
+  loop:
+    - tmux
+    - jq
+    - neovim
+    - thefuck
+    - the_silver_searcher
+    - zsh
+    - git
+    - hey
+    - bat
+    - tree
+    - autojump
+    - exa
