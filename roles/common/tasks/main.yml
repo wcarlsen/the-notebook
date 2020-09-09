@@ -13,6 +13,7 @@
       - bat
       - tree
       - exa
+      - docker
     state: latest
     update_cache: yes
 
