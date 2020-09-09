@@ -1,18 +1,6 @@
-- name: Install pacman packages
-  pacman:
-    name:
-      - tmux
-      - jq
-      - neovim
-      - thefuck
-      - the_silver_searcher
-      - zsh
-      - git
-      - hey
-      - bat
-      - tree
-      - autojump
-      - exa
-    state: latest
-    update_cache: yes
-
+---
+- name: Install common
+  hosts: all
+  become: yes
+  roles:
+    - common
