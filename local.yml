@@ -19,7 +19,7 @@
 
 - name: Fetch relevant github repos
   hosts: localhost
-  become: no
+  become_user: wcarlsen
   roles:
     - github
  
