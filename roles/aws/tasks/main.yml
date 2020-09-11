@@ -4,5 +4,3 @@
     name:
       - aws-cli
     state: latest
-    update_cache: yes
-

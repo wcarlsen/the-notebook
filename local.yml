@@ -1,7 +1,12 @@
 ---
-- name: Install common
+- name: Update cache and upgrade
   hosts: localhost
   become: yes
+  roles:
+    - update
+
+- name: Install common
+  hosts: localhost
   roles:
     - common
 
@@ -16,6 +21,12 @@
   become: yes
   roles:
     - aws
+
+- name: Setup dotfiles
+  hosts: localhost
+  become: no
+  roles:
+    - dotfiles
 
 - name: Fetch relevant github repos
   hosts: localhost

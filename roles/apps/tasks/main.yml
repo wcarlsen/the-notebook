@@ -2,7 +2,24 @@
 - name: Install apps packages
   pacman:
     name:
+      - alacritty
+      - chromium
       - code
+      - copyq
+      - dbeaver
+      - discord
+      - flameshot
+      - timeshift
+      - transmission-gtk
+      - virtualbox
+      - vlc
     state: latest
-    update_cache: yes
+  become: yes
 
+- aur:
+    use: yay
+    name:
+      - insomnia
+      - slack-desktop
+    state: latest
+  become: no

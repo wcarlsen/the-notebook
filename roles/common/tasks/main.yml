@@ -2,18 +2,35 @@
 - name: Install pacman packages
   pacman:
     name:
-      - tmux
-      - jq
-      - neovim
-      - thefuck
-      - the_silver_searcher
-      - zsh
+      - bat
+      - base-devel
+      - docker
+      - exa
       - git
       - hey
-      - bat
+      - jq
+      - neovim
+      - the_silver_searcher
+      - thefuck
+      - tmux
       - tree
-      - exa
-      - docker
+      - yay
+      - zsh
     state: latest
-    update_cache: yes
+  become: yes
 
+- aur:
+    use: yay
+    name:
+      - autojump-git
+    state: latest
+  become: no
+
+- name: Check if oh-my-zsh is installed
+  stat:
+    path: ~/.oh-my-zsh
+  register: omz
+
+- name: Install oh-my-zsh
+  shell: sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+  when: omz.stat.exists == False
