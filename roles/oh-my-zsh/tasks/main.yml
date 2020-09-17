@@ -1,0 +1,33 @@
+---
+- name: Install zsh packages
+  pacman:
+    name:
+      - zsh
+    state: latest
+  become: yes
+
+- aur:
+    use: yay
+    name:
+      - autojump-git
+    state: latest
+  become: no
+
+- name: Check if oh-my-zsh is installed
+  stat:
+    path: ~/.oh-my-zsh
+  register: omz
+
+- name: Install oh-my-zsh
+  shell: sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+  when: omz.stat.exists == False
+
+- name: Remove .zshrc
+  file:
+    path: ~/.zshrc
+    state: absent
+  when: omz.stat.exists == False
+
+- name: Switch to zsh
+  shell: chsh -s /bin/zsh
+  when: omz.stat.exists == False

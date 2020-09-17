@@ -1,5 +1,5 @@
 ---
 - git:
     repo: git@github.com:wcarlsen/dotfiles.git
-    dest: /home/wcarlsen/dotfiles
+    dest: ~/dotfiles
   

@@ -4,9 +4,9 @@
     name:
       - bat
       - base-devel
-      - docker
       - exa
       - git
+      - github-cli
       - hey
       - jq
       - neovim
@@ -15,7 +15,6 @@
       - tmux
       - tree
       - yay
-      - zsh
     state: latest
   become: yes
 
@@ -25,12 +24,3 @@
       - autojump-git
     state: latest
   become: no
-
-- name: Check if oh-my-zsh is installed
-  stat:
-    path: ~/.oh-my-zsh
-  register: omz
-
-- name: Install oh-my-zsh
-  shell: sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-  when: omz.stat.exists == False

@@ -1,0 +1,7 @@
+---
+- name: Install Python packages
+  pacman:
+    name:
+      - python
+      - python-pipenv
+    state: latest

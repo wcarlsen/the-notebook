@@ -1,0 +1,19 @@
+---
+- name: Install Docker packages
+  pacman:
+    name:
+      - docker
+    state: latest
+  become: yes
+
+- name: Enable and start docker service
+  systemd:
+    name: docker.service
+    state: started
+    enabled: yes
+
+- name: Add the user to docker group
+  user:
+    name: wcarlsen
+    group: docker
+  become: yes

@@ -1,10 +1,10 @@
 ---
 - name: Create spaghetti folder
   file:
-    path: /home/wcarlsen/spaghetti
+    path: ~/spaghetti
     state: directory
 
 - git:
     repo: git@github.com:dfds/infrastructure-modules.git
-    dest: /home/wcarlsen/spaghetti/infrastructure-modules
+    dest: ~/spaghetti/infrastructure-modules
   

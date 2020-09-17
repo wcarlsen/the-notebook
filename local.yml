@@ -10,9 +10,18 @@
   roles:
     - common
 
+- name: Install docker
+  hosts: localhost
+  roles:
+    - docker
+
+- name: Install oh-my-zsh
+  hosts: localhost
+  roles:
+    - oh-my-zsh
+
 - name: Install kubernetes
   hosts: localhost
-  become: yes
   roles:
     - kubernetes
 
@@ -21,6 +30,18 @@
   become: yes
   roles:
     - aws
+
+- name: Install go
+  hosts: localhost
+  become: yes
+  roles:
+    - golang
+
+- name: Install python
+  hosts: localhost
+  become: yes
+  roles:
+    - python
 
 - name: Setup dotfiles
   hosts: localhost
